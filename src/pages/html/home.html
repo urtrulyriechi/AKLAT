@@ -1,83 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AKLAT ni Riechi</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-    <title>AKLAT ni Riechi | Home </title>
-
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-
+  <body>
+    <!-- NAV -->
     <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="library.html">Library</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#borrow-form">Sign Up</a></li>
-        </ul>
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#">LIBRARY</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#borrow">SIGN UP</a></li>
+      </ul>
     </nav>
 
+    <!-- HERO -->
     <header id="home">
-        <h1>AKLAT</h1>
-        <p>ni Riechi</p>
+      <h1>AKLAT</h1>
+      <p>NI RIECHI</p>
     </header>
 
+    <!-- ABOUT -->
     <section id="about">
-        <h2>About AKLAT</h2>
-        <p>Aklat ni Riechi is a personal project showcasing a collection of books from different genres, both fiction and non‑fiction. 
-        These titles were chosen to highlight a variety of stories, themes, and cultural influences. In this website, you can explore book covers, 
-        authors, and short summaries you like. </p>
+      <div class="about-text">
+        <p>
+          Aklat ni Riechi is a personal project showcasing a collection of books
+          from different genres, both fiction and non-fiction. These titles were
+          chosen to highlight a variety of stories, themes, and cultural
+          influences.
+        </p>
+      </div>
     </section>
 
+    <!-- TOP PICKS -->
     <section id="top-picks">
-        <h2>Top Picks</h2>
-        <div class="grid-container">
-            <img src="love-hypothesis.png" alt="The Love Hypothesis" width="150">
-            <img src="atomic.png" alt="Atomic Habits" width="150">
-            <img src="wimpy-kid.png" alt="Diary of a Wimpy Kid" width="150">
-        </div>
+      <h2>TOP PICKS</h2>
+
+      <div class="shelf">
+        <img src="../../assets/Images/books/love-hypothesis.png" />
+        <img src="../../assets/Images/books/atomic.png" />
+        <img src="../../assets/Images/books/catching-fire.png" />
+      </div>
+
+      <div class="shelf">
+        <img src="../../assets/Images/books/wimpy-kid.png" />
+        <img src="../../assets/Images/books/hiroshima.png" />
+        <img src="../../assets/Images/books/becoming.png" />
+        <img src="../../assets/Images/books/spiderman.png" />
+      </div>
     </section>
 
+    <!-- GUIDELINES -->
     <section id="faq">
-        <h2>Borrowing Guidelines</h2>
-        <div>
-            <h3>1. Select & Reserve</h3>
-            <p>Browse the collection and choose the book you’d like to borrow.</p>
-            
-            <h3>2. Fill Out Borrow Form</h3>
-            <p>Fill out the borrowing form with your details and the selected book.</p>
-            
-            <h3>3. Return on Time</h3>
-            <p>Return the book within 7 days in good condition, on or before the due date to avoid delays.</p>
-
+      <div class="guide-box">
+        <div class="left">
+          <h2>GUIDELINES</h2>
         </div>
+
+        <div class="right">
+          <p><b>1. Choose a Book</b><br />Browse and pick a book.</p>
+          <p><b>2. Fill Out Form</b><br />Enter your details.</p>
+          <p><b>3. Borrowing Period</b><br />Up to 7 days.</p>
+          <p><b>4. Return Policy</b><br />Return on time.</p>
+          <p><b>5. Care</b><br />Keep books clean.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="borrow-form">
-        <h2>Borrow a Book!</h2>
-        <form>
-            <label for="student-name">Full Name:</label><br>
-            <input type="text" id="student-name" name="student-name" required><br><br>
+    <!-- FORM -->
+    <section id="borrow">
+      <h2>BORROW A BOOK</h2>
 
-            <label for="book-select">Select Book:</label><br>
-            <select id="book-select" name="book-select">
-                <option value="love-hypothesis">The Love Hypothesis</option>
-                <option value="smaller-circles">Smaller and Smaller Circles</option>
-                <option value="hobbit">The Hobbit</option>
-                </select><br><br>
+      <form class="table-form">
+        <div><label>FULLNAME</label><input type="text" /></div>
+        <div><label>STUDENT ID</label><input type="text" /></div>
+        <div><label>STUDENT EMAIL</label><input type="email" /></div>
 
-            <label for="borrow-date">Borrow Date:</label><br>
-            <input type="date" id="borrow-date" name="borrow-date"><br><br>
+        <div>
+          <label>BOOK</label>
+          <select>
+            <option>Love Hypothesis</option>
+            <option>Atomic Habits</option>
+          </select>
+        </div>
 
-            <input type="submit" value="Submit Request">
-        </form>
+        <div><label>BORROW DATE</label><input type="date" /></div>
+
+        <button type="submit">SUBMIT</button>
+      </form>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 AKLAT ni Riechi | School Project</p>
+      <h2>AKLAT</h2>
+      <p>© 2026 Student Project</p>
     </footer>
-
-</body>
+  </body>
 </html>

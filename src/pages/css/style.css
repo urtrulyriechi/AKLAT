@@ -1,137 +1,159 @@
-
-/* --- GLOBAL STYLES (Week 4) --- */
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #fdfaf6; /* A soft cream to match a "boutique" library vibe */
-}
-
-/* --- NAVIGATION (Week 1 & 4) --- */
+/* NAV */
 nav {
-    background-color: #1f0600; /* Dark brown background */
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
+  position: fixed;
+  width: 100%;
+  background: #2b0a05;
+  padding: 15px;
+  text-align: center;
 }
 
-nav ul {
-    list-style: none;
+nav li {
+  display: inline;
+  margin: 0 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 20px;
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase; /* Week 4 Property */
-    letter-spacing: 2px;
+/* HERO */
+#home {
+  background: url("../../assets/Images/bgs/hero.png") center/cover;
+  height: 100vh;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* --- BACKGROUND SECTIONS (Your Canva Assets) --- */
-header#home {
-    background-image: url('../../assets/Images/bgs/hero.png');
-    height: 100vh;
+#home h1 {
+  font-size: 20rem;
 }
 
-section#about {
-    background-image: url('../../assets/Images/bgs/about.png');
-    height: 100vh;
+#home p {
+  font-size: 3rem;
+  letter-spacing: 5px;
 }
 
-section#faq {
-    background-image: url('../../assets/Images/bgs/guide.png');
-    height: 100vh;
+/* ABOUT */
+#about {
+  background: url("../../assets/Images/bgs/hero.png") center/cover;
+  padding: 100px 50px;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
 }
 
-section#shelf {
-    background-image: url('../../assets/Images/bgs/shelf.png');
-    min-height: 100vh;
-    padding-top: 100px; /* Space for nav bar */
+.about-text {
+  width: 350px;
+  color: white;
 }
 
-/* Shared Background Logic (Week 4) */
-header, section {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white; /* Default text color for dark backgrounds */
+.about-text p {
+  font-size: 20px;
+  letter-spacing: 3px;
 }
 
-/* --- LIBRARY GRID (Week 1 Finals) --- */
-.shelf-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
-    padding: 50px;
+/* TOP PICKS */
+#top-picks {
+  background: #4b0d07;
+  color: white;
+  text-align: center;
+  padding: 50px;
 }
 
-.genre-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    background: rgba(0, 0, 0, 0.2); /* Makes the "shelf" look darker */
-    padding: 20px;
-    border-radius: 10px;
+.shelf {
+  margin: 20px 0;
 }
 
-.genre-group img {
-    transition: transform 0.3s ease; /* Smooth hover effect */
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+.shelf img {
+  width: 120px;
+  margin: 10px;
 }
 
-.genre-group img:hover {
-    transform: scale(1.1); /* Book "pops" out when hovered */
+/* GUIDELINES */
+#faq {
+  background: #4b0d07;
+  padding: 50px;
 }
 
-/* --- SPECIFIC TYPOGRAPHY CLASSES --- */
-.romance-style {
-    font-family: 'Comfortaa', cursive; /* You can link these in HTML via Google Fonts */
-    color: #d63384;
+.guide-box {
+  background: #e8d3b5;
+  display: flex;
+  max-width: 700px;
+  margin: auto;
 }
 
-.thriller-style {
-    font-family: 'Special Elite', cursive;
-    color: #333;
-    text-transform: uppercase;
+.guide-box .left {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.fantasy-style {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
+.guide-box .right {
+  width: 60%;
+  padding: 20px;
 }
 
-/* --- FORM STYLING (Week 3) --- */
-form {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    color: #333;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+/* FORM */
+#borrow {
+  background: #e8d3b5;
+  text-align: center;
+  padding: 50px;
 }
 
-input, select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#borrow h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.table-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.table-form div {
+  display: flex;
+  border: 1px solid #c96;
+}
+
+.table-form label {
+  width: 40%;
+  padding: 10px;
+  text-align: left;
+}
+
+.table-form input,
+.table-form select {
+  width: 60%;
+  border: none;
+  padding: 10px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #7a2c1c;
+  color: white;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  background: #2b0a05;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
