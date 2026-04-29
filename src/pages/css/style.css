@@ -1,26 +1,38 @@
+/* --- GOOGLE FONTS IMPORT (Week 1 Finals) --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;500;600&display=swap');
 
-/* --- GLOBAL STYLES (Week 4) --- */
+/* --- GLOBAL STYLES --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #fdfaf6; /* A soft cream to match a "boutique" library vibe */
+    background-color: #fdfaf6;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* --- NAVIGATION (Week 1 & 4) --- */
+/* Typography Assignment */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+p, a, label, input, select {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* --- NAVIGATION --- */
 nav {
-    background-color: #1f0600; /* Dark brown background */
-    padding: 20px;
+    background-color: #1f0600; 
+    padding: 25px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     text-align: center;
-    border-bottom: 1px solid #ddd;
 }
 
 nav ul {
@@ -29,40 +41,24 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 20px;
+    margin: 0 25px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    text-transform: uppercase; /* Week 4 Property */
-    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    transition: 0.3s;
 }
 
-/* --- BACKGROUND SECTIONS (Your Canva Assets) --- */
-header#home {
-    background-image: url('../../assets/Images/bgs/hero.png');
-    height: 100vh;
+nav ul li a:hover {
+    color: #d4a373; /* Subtle gold/tan hover */
 }
 
-section#about {
-    background-image: url('../../assets/Images/bgs/about.png');
-    height: 100vh;
-}
-
-section#faq {
-    background-image: url('../../assets/Images/bgs/guide.png');
-    height: 100vh;
-}
-
-section#shelf {
-    background-image: url('../../assets/Images/bgs/shelf.png');
-    min-height: 100vh;
-    padding-top: 100px; /* Space for nav bar */
-}
-
-/* Shared Background Logic (Week 4) */
+/* --- REUSABLE SECTION LOGIC --- */
 header, section {
     background-size: cover;
     background-position: center;
@@ -72,66 +68,229 @@ header, section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white; /* Default text color for dark backgrounds */
+    padding: 120px 20px;
+    min-height: 100vh;
 }
 
-/* --- LIBRARY GRID (Week 1 Finals) --- */
-.shelf-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px;
-    padding: 50px;
+/* --- HOME PAGE SECTIONS --- */
+
+header#home {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../../assets/Images/bgs/hero.png');
 }
 
-.genre-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    background: rgba(0, 0, 0, 0.2); /* Makes the "shelf" look darker */
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.genre-group img {
-    transition: transform 0.3s ease; /* Smooth hover effect */
-    border-radius: 5px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-}
-
-.genre-group img:hover {
-    transform: scale(1.1); /* Book "pops" out when hovered */
-}
-
-/* --- SPECIFIC TYPOGRAPHY CLASSES --- */
-.romance-style {
-    font-family: 'Comfortaa', cursive; /* You can link these in HTML via Google Fonts */
-    color: #d63384;
-}
-
-.thriller-style {
-    font-family: 'Special Elite', cursive;
-    color: #333;
+header#home h1 {
+    color: white;
+    font-size: 6rem;
+    letter-spacing: 18px;
     text-transform: uppercase;
+    margin-bottom: 0;
 }
 
-.fantasy-style {
-    font-family: 'Cinzel', serif;
-    letter-spacing: 3px;
+header#home p {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    font-weight: 300;
 }
 
-/* --- FORM STYLING (Week 3) --- */
+/* ABOUT SECTION */
+section#about {
+    background-image: url('../../assets/Images/bgs/about.png');
+}
+
+section#about h2 {
+    font-size: 4rem;
+    color: #1f0600;
+    margin-bottom: 30px;
+}
+
+section#about p {
+    max-width: 950px;
+    font-size: 1.4rem;
+    background: rgba(255, 255, 255, 0.85); /* Glass-like rectangular background */
+    padding: 60px;
+    border-radius: 2px;
+    color: #1f0600;
+    line-height: 2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* TOP PICKS */
+section#top-picks {
+    background-image: url('../../assets/Images/bgs/bb.png');
+}
+
+section#top-picks h2 {
+    font-size: 4.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    margin-bottom: 50px;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.grid-container img {
+    border-radius: 4px;
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.3);
+    transition: 0.4s ease;
+}
+
+.grid-container img:hover {
+    transform: scale(1.05);
+}
+
+/* FAQ / GUIDELINES */
+section#faq {
+    background-image: url('../../assets/Images/bgs/guide.png');
+}
+
+section#faq h2 {
+    font-size: 4.5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    margin-bottom: 40px;
+}
+
+section#faq h3 {
+    font-size: 2.2rem;
+    color: white;
+    margin-top: 30px;
+    font-weight: 400;
+}
+
+section#faq p {
+    color: white;
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin-top: 10px;
+}
+
+/* BORROW FORM SECTION */
+section#borrow-form {
+    background-image: url('../../assets/Images/bgs/hero.png');
+}
+
+section#borrow-form h2 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 40px;
+    letter-spacing: 8px;
+}
+
 form {
     background: white;
-    padding: 40px;
-    border-radius: 15px;
-    color: #333;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 70px;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 0; /* Minimalist sharp edges */
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+form label {
+    display: block;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #1f0600;
 }
 
 input, select {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    border-bottom: 2px solid #1f0600; /* Canva underline style */
+    background-color: #fcfcfc;
+    padding: 15px;
+    margin-bottom: 35px;
+    font-size: 1.1rem;
+    outline: none;
 }
+
+input[type="submit"] {
+    border: none;
+    background-color: #1f0600;
+    color: white;
+    padding: 22px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #4b1200;
+    letter-spacing: 6px;
+}
+
+/* --- LIBRARY PAGE SPECIFICS --- */
+
+section#shelf {
+    background-image: url('../../assets/Images/bgs/shelf.png');
+    padding-top: 180px;
+}
+
+section#shelf h2 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.shelf-container {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    width: 90%;
+    max-width: 1100px;
+}
+
+.genre-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 30px;
+}
+
+.genre-group h3 {
+    grid-column: 1 / -1;
+    color: white;
+    font-size: 2.5rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+}
+
+.genre-group img {
+    width: 100%;
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.genre-group img:hover {
+    transform: translateY(-10px) rotate(2deg);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #1f0600;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- TYPOGRAPHY CLASSES FOR BOOK INFO --- */
+.romance-style { font-family: 'Montserrat', sans-serif; color: #7a2048; }
+.thriller-style { font-family: 'Playfair Display', serif; font-weight: 700; color: #1a1a1a; }
+.fantasy-style { font-family: 'Playfair Display', serif; font-style: italic; color: #2c3e50; }
