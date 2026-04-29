@@ -1,0 +1,139 @@
+body {
+    background-color: red !important;
+}
+/* --- GLOBAL STYLES (Week 4) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfaf6; /* A soft cream to match a "boutique" library vibe */
+}
+
+/* --- NAVIGATION (Week 1 & 4) --- */
+nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase; /* Week 4 Property */
+    letter-spacing: 2px;
+}
+
+/* --- BACKGROUND SECTIONS (Your Canva Assets) --- */
+header#home {
+    background-image: url('hero.jpg');
+    height: 100vh;
+}
+
+section#about {
+    background-image: url('about.jpg');
+    height: 100vh;
+}
+
+section#faq {
+    background-image: url('guide.jpg');
+    height: 100vh;
+}
+
+section#shelf {
+    background-image: url('bshelf.jpg');
+    min-height: 100vh;
+    padding-top: 100px; /* Space for nav bar */
+}
+
+/* Shared Background Logic (Week 4) */
+header, section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Default text color for dark backgrounds */
+}
+
+/* --- LIBRARY GRID (Week 1 Finals) --- */
+.shelf-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 50px;
+}
+
+.genre-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.2); /* Makes the "shelf" look darker */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.genre-group img {
+    transition: transform 0.3s ease; /* Smooth hover effect */
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.genre-group img:hover {
+    transform: scale(1.1); /* Book "pops" out when hovered */
+}
+
+/* --- SPECIFIC TYPOGRAPHY CLASSES --- */
+.romance-style {
+    font-family: 'Comfortaa', cursive; /* You can link these in HTML via Google Fonts */
+    color: #d63384;
+}
+
+.thriller-style {
+    font-family: 'Special Elite', cursive;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.fantasy-style {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+}
+
+/* --- FORM STYLING (Week 3) --- */
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
