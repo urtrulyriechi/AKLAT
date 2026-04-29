@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aklat ni Riechi</title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- ===== NAV BAR ===== -->
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#signup">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <img src="images-section/hero.png" alt="Hero Background" class="hero-bg">
+    <div class="hero-text">
+      <h1>AKLAT</h1>
+      <p>Ni Richelle</p>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about">
+    <img src="images-section/about.png" alt="About Background" class="about-bg">
+    <div class="about-text">
+      <h2>About Aklat ni Riechi</h2>
+      <p>Aklat ni Riechi is a personal gallery showcasing a collection of books from different genres, both fiction and non‑fiction.</p>
+    </div>
+  </section>
+
+  <!-- ===== TOP PICKS SECTION ===== -->
+  <section class="top-picks">
+    <h2>Top Picks</h2>
+    <div class="book-grid">
+      <img src="images/atomic-habits.jpg" alt="Atomic Habits">
+      <img src="images/subtle-art.jpg" alt="The Subtle Art of Not Giving a F*ck">
+      <img src="images/cant-hurt-me.jpg" alt="Can't Hurt Me">
+    </div>
+  </section>
+
+  <!-- ===== GUIDELINES SECTION ===== -->
+  <section class="guidelines" id="faq">
+    <img src="images-section/bb.png" alt="Guidelines Background" class="guidelines-bg">
+    <div class="guidelines-text">
+      <h2>Borrowing Guidelines</h2>
+      <ol>
+        <li>Choose a book from the collection.</li>
+        <li>Fill out the borrow form.</li>
+        <li>Borrowing period is up to 7 days.</li>
+        <li>Return the book on or before the due date.</li>
+        <li>Handle books with care.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== BORROW FORM SECTION ===== -->
+  <section class="borrow" id="signup">
+    <h2>Borrow a Book</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="title">Book Title:</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="borrow-date">Borrow Date:</label>
+      <input type="date" id="borrow-date" name="borrow-date" required>
+
+      <label for="return-date">Return Date:</label>
+      <input type="date" id="return-date" name="return-date" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 Aklat ni Riechi. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
