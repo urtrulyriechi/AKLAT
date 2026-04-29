@@ -42,22 +42,22 @@ nav ul li a {
 
 /* --- BACKGROUND SECTIONS (Your Canva Assets) --- */
 header#home {
-    background-image: url('hero.png');
+    background-image: url('../../assets/Images/bgs/hero.png');
     height: 100vh;
 }
 
 section#about {
-    background-image: url('about.png');
+    background-image: url('../../assets/Images/bgs/about.png');
     height: 100vh;
 }
 
 section#faq {
-    background-image: url('guide.png');
+    background-image: url('../../assets/Images/bgs/guide.png');
     height: 100vh;
 }
 
 section#shelf {
-    background-image: url('bshelf.png');
+    background-image: url('../../assets/Images/bgs/shelf.png');
     min-height: 100vh;
     padding-top: 100px; /* Space for nav bar */
 }
