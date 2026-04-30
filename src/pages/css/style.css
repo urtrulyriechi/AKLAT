@@ -124,13 +124,79 @@ section#top-picks h2 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* FAQ / GUIDELINES */
+/* --- UPDATED GUIDELINES (Dark Boutique Style) --- */
+
 section#faq {
-    background-color: #1f0600;
+    background-color: #1f0600; /* Your primary dark brown color */
+    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-section#faq h2, section#faq h3 {
+.guidelines-container {
+    display: flex; /* Finals PPT Layout logic */
+    max-width: 1100px;
+    width: 100%;
+    gap: 80px; /* Space between Title and Rules */
+    align-items: flex-start;
+}
+
+/* Left Side: Title Styling */
+.guidelines-title-box {
+    flex: 1;
+    text-align: left;
+}
+
+.guidelines-title-box .subtitle {
+    color: #d4a373; /* Using the tan/gold hover color from your nav */
+    font-size: 24px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.guidelines-title-box h2 {
+    font-size: 80px; /* Matches your header H1 style */
     color: white;
+    line-height: 0.9;
+    letter-spacing: 5px;
+}
+
+/* Right Side: Rules Styling */
+.guidelines-rules-box {
+    flex: 1.5;
+    background-color: rgba(255, 255, 255, 0.05); /* Very subtle highlight */
+    padding: 40px;
+    border-left: 2px solid #d4a373; /* Elegant vertical line separator */
+}
+
+.rule-item {
+    margin-bottom: 35px;
+}
+
+.rule-item h3 {
+    font-size: 22px;
+    color: #d4a373;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    text-transform: none; /* Keeps it readable */
+}
+
+.rule-item p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fdfaf6; /* Off-white for readability */
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+    .guidelines-container {
+        flex-direction: column;
+        gap: 40px;
+    }
 }
 
 /* BORROW FORM (Week 3 Forms) */
