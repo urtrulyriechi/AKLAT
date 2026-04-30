@@ -1,159 +1,487 @@
-/* RESET */
+/* --- GOOGLE FONTS IMPORT (Week 1 Finals) --- */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap");
+
+/* --- GLOBAL STYLES (Week 4) --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-/* NAV */
+body {
+  background-color: #fdfaf6;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Typography Assignment */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: white;
+  font-size: 85px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+/* --- NAVIGATION (Week 1 & 4) --- */
 nav {
+  background-color: #1f0600;
+  padding: 25px;
   position: fixed;
   width: 100%;
-  background: #2b0a05;
-  padding: 15px;
+  top: 0;
+  z-index: 1000;
   text-align: center;
 }
 
+nav ul {
+  list-style: none;
+}
+
 nav li {
-  display: inline;
+  display: inline-block;
   margin: 0 20px;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  position: relative;
+  padding: 5px 0;
+
+  transition: color 0.3s ease;
 }
 
-/* HERO */
-#home {
-  background: url("../../assets/Images/bgs/hero.png") center/cover;
-  height: 100vh;
-  color: white;
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
 
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* --- REUSABLE SECTION LOGIC (Week 4 & Finals) --- */
+header,
+section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 100vh;
 }
 
-#home h1 {
-  font-size: 20rem;
+/* --- HOME PAGE SECTIONS --- */
+
+header#home {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../../assets/Images/bgs/hero.png");
 }
 
-#home p {
-  font-size: 3rem;
+header#home h1 {
+  color: white;
+  font-size: 250px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+header#home p {
+  color: white;
+  font-size: 24px;
   letter-spacing: 5px;
 }
 
-/* ABOUT */
-#about {
-  background: url("../../assets/Images/bgs/hero.png") center/cover;
-  padding: 100px 50px;
-  height: 50vh;
-  align-items: center;
-  justify-content: center;
+/* ABOUT SECTION (Week 4 Box Model) */
+section#about {
+  background-color: #1f0600;
 }
 
-.about-text {
-  width: 350px;
-  color: white;
-}
-
-.about-text p {
+section#about p {
+  max-width: 800px;
   font-size: 20px;
-  letter-spacing: 3px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 50px;
+  color: #1f0600;
+  border: 1px solid #ddd;
 }
 
-/* TOP PICKS */
-#top-picks {
-  background: #4b0d07;
+/* TOP PICKS (Finals Flexbox) */
+section#top-picks {
+  background-image: url("../../assets/Images/bgs/bb.png");
+}
+
+section#top-picks h2 {
+  font-size: 60px;
   color: white;
-  text-align: center;
-  padding: 50px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 30px;
 }
 
-.shelf {
-  margin: 20px 0;
-}
-
-.shelf img {
-  width: 120px;
-  margin: 10px;
-}
-
-/* GUIDELINES */
-#faq {
-  background: #4b0d07;
-  padding: 50px;
-}
-
-.guide-box {
-  background: #e8d3b5;
+.grid-container {
   display: flex;
-  max-width: 700px;
-  margin: auto;
-}
-
-.guide-box .left {
-  width: 40%;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  gap: 30px;
+  transition: box-shadow 0.3s ease;
 }
 
-.guide-box .right {
-  width: 60%;
-  padding: 20px;
+.grid-container > * {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* FORM */
-#borrow {
-  background: #e8d3b5;
-  text-align: center;
-  padding: 50px;
+.grid-container > *:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-#borrow h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
+/* --- UPDATED GUIDELINES (Dark Boutique Style) --- */
 
-.table-form {
-  max-width: 500px;
-  margin: auto;
-}
-
-.table-form div {
+section#faq {
+  background-color: #1f0600; /* Your primary dark brown color */
+  padding: 120px 20px;
   display: flex;
-  border: 1px solid #c96;
+  justify-content: center;
+  align-items: center;
 }
 
-.table-form label {
-  width: 40%;
-  padding: 10px;
+.guidelines-container {
+  display: flex; /* Finals PPT Layout logic */
+  max-width: 1100px;
+  width: 100%;
+  gap: 80px; /* Space between Title and Rules */
+  align-items: flex-start;
+}
+
+/* Left Side: Title Styling */
+.guidelines-title-box {
+  flex: 1;
   text-align: left;
 }
 
-.table-form input,
-.table-form select {
-  width: 60%;
-  border: none;
+.guidelines-title-box .subtitle {
+  color: #d4a373; /* Using the tan/gold hover color from your nav */
+  font-size: 24px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.guidelines-title-box h2 {
+  font-size: 80px; /* Matches your header H1 style */
+  color: white;
+  line-height: 0.9;
+  letter-spacing: 5px;
+}
+
+/* Right Side: Rules Styling */
+.guidelines-rules-box {
+  flex: 1.5;
+  background-color: rgba(255, 255, 255, 0.05); /* Very subtle highlight */
+  padding: 40px;
+  border-left: 2px solid #d4a373; /* Elegant vertical line separator */
+}
+
+.rule-item {
+  margin-bottom: 35px;
+}
+
+.rule-item h3 {
+  font-size: 22px;
+  color: #d4a373;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-transform: none; /* Keeps it readable */
+}
+
+.rule-item p {
+  font-family: "Montserrat", sans-serif;
+  color: #fdfaf6; /* Off-white for readability */
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+  .guidelines-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* BORROW FORM (Week 3 Forms) */
+section#borrow-form {
+  background-color: #f5e6d3;
+}
+
+#borrow h2 {
+  color: #1f0600;
+}
+
+form {
+  background-color: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #1f0600;
+}
+
+input,
+select {
+  width: 100%;
   padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #1f0600;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #7a2c1c;
-  color: white;
-  border: none;
+  margin-top: 2rem;
+  padding: 12px 28px;
+  background: #1f0600;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  border: 2px solid #1f0600;
+
+  transition: all 0.25s ease;
+  cursor: pointer;
 }
 
-/* FOOTER */
-footer {
-  background: #2b0a05;
-  color: white;
+button:hover {
+  background: transparent;
+  color: #1f0600;
+}
+
+/* --- LIBRARY PAGE SPECIFICS (Week 4 & Finals) --- */
+
+/* This is the background for the entire Shelf area where the book covers are */
+section#shelf {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../assets/Images/bgs/bshelf.png") center / cover no-repeat;
+  background-attachment: fixed;
+  padding: 150px 20px 100px;
   text-align: center;
-  padding: 20px;
+}
+
+section#shelf h2 {
+  font-size: clamp(2.5rem, 5vw, 60px);
+  color: #fff;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+}
+
+section#shelf h3 {
+  font-size: clamp(2rem, 3vw, 50px);
+  color: #fff;
+  margin-bottom: 40px;
+  letter-spacing: 4px;
+}
+
+/* --- SHELF LAYOUT --- */
+.shelf-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.genre-group {
+  margin-bottom: 60px;
+}
+
+/* --- BOOK GRID --- */
+.genre-group a {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.genre-group img {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.genre-group img:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* --- BOOK DETAILS SECTION --- */
+section#book-details {
+  background-color: #f7f3f0;
+  padding: 100px 20px;
+}
+
+/* --- BOOK CARD --- */
+.book-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #eee;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.book-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* --- BOOK VISUAL --- */
+.book-visual {
+  flex: 1;
+}
+
+.book-visual img {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- BOOK TEXT --- */
+.book-text {
+  flex: 2;
+}
+
+.book-text h2 {
+  font-size: 2.2rem;
+  color: #1f0600;
+  margin-bottom: 10px;
+}
+
+.book-meta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.mini-divider {
+  border: none;
+  border-top: 3px solid #1f0600;
+  width: 50px;
+  margin: 15px 0;
+}
+
+.summary-label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1f0600;
+  margin-top: 10px;
+}
+
+.summary-content {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* --- GENRE COLOR STYLES --- */
+.romance-style {
+  color: #b03060;
+}
+
+.thriller-style {
+  color: #8b0000;
+}
+
+.fantasy-style {
+  color: #4b0082;
+}
+
+/* --- BACK LINK --- */
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #1f0600;
+  font-weight: bold;
+  border-bottom: 2px solid #1f0600;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #1f0600;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .book-info-card {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  section#shelf {
+    background-attachment: scroll;
+  }
+
+  .genre-group img {
+    width: 90px;
+    height: 140px;
+  }
 }
